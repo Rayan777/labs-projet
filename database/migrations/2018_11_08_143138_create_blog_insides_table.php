@@ -15,6 +15,11 @@ class CreateBlogInsidesTable extends Migration
     {
         Schema::create('blog_insides', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('image_article');
+            $table->text('article');
+            $table->text('auteur')->nullable();
+            $table->text('commentaires')->nullable();
+            $table->text('temp');
             $table->timestamps();
         });
     }
